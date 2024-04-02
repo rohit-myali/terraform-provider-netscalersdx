@@ -1564,7 +1564,7 @@ func getThePayloadFromtheConfig(ctx context.Context, data *provisionVpxResourceM
 		Nexthop:                    data.Nexthop.ValueString(),
 		PltBwConfig:                data.PltBwConfig.ValueString(),
 		CryptoChangeRequiresReboot: data.CryptoChangeRequiresReboot.ValueString(),
-		NsvlanInterfaces:           utils.TypeListToStringList(data.NsvlanInterfaces),
+		NsvlanInterfaces:           utils.TypeListToUnmarshalStringList(data.NsvlanInterfaces),
 		RebootVmOnCpuChange:        data.RebootVmOnCpuChange.ValueString(),
 		L2Enabled:                  data.L2Enabled.ValueString(),
 		ProfilePassword:            data.ProfilePassword.ValueString(),
